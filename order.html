@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Rise Her Collective</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Rise Her Collective</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="impact.html">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Place Your Order</h1>
+            <p class="page-subtitle">Get in touch to order your delicious baked goods</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+        <div class="container">
+            <div class="order-container">
+                <div class="order-form-container">
+                    <h2>Order Form</h2>
+                    <form class="order-form" action="mailto:orders@risehercollective.org" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="order-details">Order Details *</label>
+                            <textarea id="order-details" name="order-details" rows="5" required placeholder="Please include:&#10;- Products you'd like to order&#10;- Quantities (e.g., 2 dozen cookies)&#10;- Flavors or preferences&#10;- Preferred pickup/delivery date"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery-option">Pickup or Delivery? *</label>
+                            <select id="delivery-option" name="delivery-option" required>
+                                <option value="">Select an option</option>
+                                <option value="pickup">Pickup</option>
+                                <option value="delivery">Delivery</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additional-info">Additional Information</label>
+                            <textarea id="additional-info" name="additional-info" rows="3" placeholder="Any special requests, dietary restrictions, or questions?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Submit Order</button>
+                        <p class="form-note">* Required fields. We'll respond within 24-48 hours to confirm your order.</p>
+                    </form>
+                </div>
+
+                <div class="order-info-container">
+                    <h2>Direct Contact</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>orders@risehercollective.org</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p>[Your Phone Number]</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Response Time</h3>
+                            <p>We'll respond within 24-48 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="order-process">
+                        <h2>Order Process</h2>
+                        <ol>
+                            <li>Submit your order via form or email</li>
+                            <li>We'll confirm availability and details</li>
+                            <li>Arrange payment method</li>
+                            <li>Schedule pickup or delivery</li>
+                            <li>Enjoy your delicious baked goods!</li>
+                        </ol>
+                    </div>
+
+                    <div class="pickup-delivery-info">
+                        <h2>Pickup & Delivery</h2>
+                        <div class="info-box">
+                            <h3>Pickup Location</h3>
+                            <p>[Your Address Here]</p>
+                            <p>Available: [Days/Times - e.g., "Saturdays 10am-2pm"]</p>
+                        </div>
+                        <div class="info-box">
+                            <h3>Delivery Area</h3>
+                            <p>[Your delivery area - e.g., "Within 10 miles" or specific zip codes]</p>
+                            <p>Delivery Fee: [Amount or "Free within X miles"]</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-info">
+                        <h2>Payment Options</h2>
+                        <p>We accept:</p>
+                        <ul>
+                            <li>Cash</li>
+                            <li>Venmo</li>
+                            <li>PayPal</li>
+                            <li>CashApp</li>
+                            <li>Check</li>
+                        </ul>
+                        <p class="payment-note">Payment details will be arranged when we confirm your order.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How far in advance should I order?</h3>
+                    <p>We recommend ordering at least 3-5 days in advance, especially for custom cakes. For standard items, 2-3 days notice is appreciated.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer delivery?</h3>
+                    <p>Yes! Delivery is available within [your area]. Please contact us for delivery options and fees.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize flavors?</h3>
+                    <p>Absolutely! We're happy to accommodate custom flavors and special requests. Just mention it in your order.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I need to cancel my order?</h3>
+                    <p>Please contact us as soon as possible if you need to cancel. We appreciate at least 24 hours notice when possible.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are your products made in a licensed kitchen?</h3>
+                    <p>[Answer based on your situation - be transparent about kitchen licensing if applicable]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Rise Her Collective</h3>
+                    <p>Delicious baked goods for a cause</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: orders@risehercollective.org</p>
+                    <p>Phone: [Your Phone Number]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Rise Her Collective. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
