@@ -36,6 +36,9 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
+                <li class="mobile-menu-close-wrapper">
+                    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+                </li>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="our-story.html">Our Story</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -309,6 +312,15 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
         // Mobile Menu Toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
         
         if (mobileMenuToggle) {
             mobileMenuToggle.addEventListener('click', function() {
@@ -317,15 +329,17 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
                 navMenu.classList.toggle('active');
                 this.classList.toggle('active');
             });
+        }
+        
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
 
-            // Close menu when clicking on a link
+        // Close menu when clicking on a link
+        if (navMenu) {
             const navLinks = navMenu.querySelectorAll('a');
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navMenu.classList.remove('active');
-                    mobileMenuToggle.classList.remove('active');
-                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                });
+                link.addEventListener('click', closeMobileMenu);
             });
         }
     </script>
