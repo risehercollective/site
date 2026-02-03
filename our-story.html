@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="mobile-nav.js" defer></script>
 </head>
 <body>
     <!-- Farmers Market Popup Modal -->
@@ -23,7 +24,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Rise Her Collective</div>
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">Rise Her Collective</div>
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-menu-overlay"></div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="our-story.html" class="active">Our Story</a></li>
@@ -129,8 +138,8 @@ More rising — together.
                 <div class="founder-card" style="text-align: center; background: white; padding: 2.5rem 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(251, 158, 187, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="polaroid-container" style="margin-bottom: 2rem;">
                         <div class="polaroid-frame" style="background: white; padding: 15px 15px 50px 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 0 8px white, 0 0 0 10px #f0f0f0; border-radius: 2px; display: inline-block; transform: rotate(-2deg); position: relative;">
-                            <div style="width: 250px; height: 300px; background: linear-gradient(135deg, #FFE6EE 0%, #FFD6E8 100%); border-radius: 2px; overflow: hidden; position: relative;">
-                                <img src="images/IMG_0808.jpg" alt="Founder 1" style="width: 100%; object-position: 0px 0px; height: 100%; object-fit: cover; display: block;">
+                            <div style="width: 250px; height: 300px; background: white; border-radius: 2px; overflow: hidden; position: relative;">
+                                <img src="images/IMG_0808.jpg" alt="Founder 1" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;">
                             </div>
                         </div>
                     </div>
@@ -147,10 +156,8 @@ More rising — together.
                 <div class="founder-card" style="text-align: center; background: white; padding: 2.5rem 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(251, 158, 187, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="polaroid-container" style="margin-bottom: 2rem;">
                         <div class="polaroid-frame" style="background: white; padding: 15px 15px 50px 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 0 8px white, 0 0 0 10px #f0f0f0; border-radius: 2px; display: inline-block; transform: rotate(1deg); position: relative;">
-                            <div style="width: 250px; height: 300px; background: linear-gradient(135deg, #FFE6EE 0%, #FFD6E8 100%); border-radius: 2px; overflow: hidden; position: relative;">
-                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FFE6EE 0%, #FFD6E8 100%);">
-                                    <img src="images/IMG_0811.PNG" alt="Founder 2" style="width: 110%; object-position: 0px 0px; height: 50% 100%; object-fit: cover; display: block;">
-                                </div>
+                            <div style="width: 250px; height: 300px; background: white; border-radius: 2px; overflow: hidden; position: relative;">
+                                <img src="images/IMG_0811.PNG" alt="Founder 2" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                             </div>
                         </div>
                     </div>
@@ -167,10 +174,8 @@ More rising — together.
                 <div class="founder-card" style="text-align: center; background: white; padding: 2.5rem 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(251, 158, 187, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="polaroid-container" style="margin-bottom: 2rem;">
                         <div class="polaroid-frame" style="background: white; padding: 15px 15px 50px 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 0 8px white, 0 0 0 10px #f0f0f0; border-radius: 2px; display: inline-block; transform: rotate(-1deg); position: relative;">
-                            <div style="width: 250px; height: 300px; background: linear-gradient(135deg, #FFE6EE 0%, #FFD6E8 100%); border-radius: 2px; overflow: hidden; position: relative;">
-                                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FFE6EE 0%, #FFD6E8 100%);">
-                                    <img src="images/IMG_0812.jpg" alt="Founder 3" style="width: 100%; object-position: 0px 0px; height: 100%; object-fit: cover; display: block;">
-                                </div>
+                            <div style="width: 250px; height: 300px; background: white; border-radius: 2px; overflow: hidden; position: relative;">
+                                <img src="images/IMG_0812.jpg" alt="Founder 3" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                             </div>
                         </div>
                     </div>

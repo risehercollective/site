@@ -100,6 +100,16 @@ body::before {
     line-height: 1;
     text-shadow: 0 2px 8px rgba(251, 158, 187, 0.15);
     transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+a .logo {
+    display: inline-block;
+}
+
+a:hover .logo {
+    transform: scale(1.05);
+    text-shadow: 0 4px 12px rgba(251, 158, 187, 0.25);
 }
 
 .brand-tagline {
@@ -973,6 +983,23 @@ body::before {
     }
 }
 
+/* Accessibility: honor Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    .polaroid-frame.scroll-animate,
+    .polaroid-frame.scroll-animate.in-view {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .scroll-reveal,
+    .scroll-reveal.in-view {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 .step {
     text-align: center;
     transition: all 0.3s ease;
@@ -1471,7 +1498,7 @@ body::before {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 2001;
     position: relative;
 }
 
@@ -1548,6 +1575,12 @@ body::before {
     .mobile-menu-toggle {
         display: flex;
     }
+
+    /* iOS Safari fix: backdrop-filter can break/clamp fixed-position children (like our slide-out menu) */
+    .navbar {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
     
     .nav-container {
         padding: 0 20px;
@@ -1565,6 +1598,37 @@ body::before {
         font-size: 0.6rem !important;
         letter-spacing: 1px !important;
     }
+
+    /* ------------------------------------------------------------
+       Scroll-in polaroid animation (mobile)
+       Used by mobile-nav.js (adds .scroll-animate then .in-view)
+       ------------------------------------------------------------ */
+    .polaroid-frame.scroll-animate {
+        opacity: 0;
+        transform: translateY(16px) rotate(-1.5deg) scale(0.98);
+        transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+                    opacity 420ms ease-out;
+        will-change: transform, opacity;
+    }
+
+    .polaroid-frame.scroll-animate.in-view {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    /* Generic scroll reveal (used on Menu page via mobile-nav.js) */
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(14px) scale(0.99);
+        transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+                    opacity 420ms ease-out;
+        will-change: transform, opacity;
+    }
+
+    .scroll-reveal.in-view {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
     
     /* Mobile Menu Overlay */
     .mobile-menu-overlay {
@@ -1578,11 +1642,11 @@ body::before {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
-        z-index: 1999;
+        /* Behind the menu drawer, above the page */
+        z-index: 2000;
         pointer-events: none;
     }
-    
-    .nav-menu.active ~ .mobile-menu-overlay,
+
     .mobile-menu-overlay.active {
         opacity: 1;
         visibility: visible;
@@ -1605,7 +1669,8 @@ body::before {
         margin: 0;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease;
-        z-index: 1001;
+        /* Above overlay */
+        z-index: 2001;
         overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
@@ -1617,47 +1682,6 @@ body::before {
         right: 0;
     }
     
-    .mobile-menu-close-wrapper {
-        width: 100%;
-        padding: 1.25rem 1.5rem;
-        border-bottom: 2px solid rgba(251, 158, 187, 0.2);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.8);
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        flex-shrink: 0;
-    }
-    
-    .mobile-menu-close {
-        background: none;
-        border: none;
-        font-size: 2.5rem;
-        color: #2c2c2c;
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        line-height: 1;
-        transition: all 0.3s ease;
-        border-radius: 50%;
-        margin-left: auto;
-    }
-    
-    .mobile-menu-close:hover,
-    .mobile-menu-close:active {
-        background: #FB9EBB;
-        color: white;
-        transform: rotate(90deg);
-    }
-    
     .nav-menu li {
         width: 100%;
         border-bottom: 1px solid rgba(251, 158, 187, 0.15);
@@ -1665,10 +1689,6 @@ body::before {
         padding: 0;
         list-style: none;
         flex-shrink: 0;
-    }
-    
-    .nav-menu li:first-child {
-        border-bottom: 2px solid rgba(251, 158, 187, 0.2);
     }
     
     .nav-menu li:last-child {
@@ -1897,6 +1917,16 @@ body::before {
     .product-image-placeholder {
         height: 220px !important;
         width: 100% !important;
+    }
+    
+    /* Make cinnamon roll image bigger on mobile (third product card) */
+    .product-grid .product-card:nth-child(3) .product-image-placeholder {
+        height: 400px !important;
+    }
+    
+    /* Show full cinnamon roll image without cropping on mobile */
+    .product-grid .product-card:nth-child(3) .product-image-placeholder img {
+        object-fit: contain !important;
     }
     
     .product-card > div[style*="padding: 2rem"] {
@@ -2501,7 +2531,18 @@ body::before {
     
     .polaroid-frame > div {
         width: 220px !important;
-        height: 270px !important;
+        height: 320px !important;
+    }
+    
+    /* Make images fill the entire polaroid frame on tablet */
+    .founder-card .polaroid-frame img {
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    
+    /* Ensure white background in image containers on tablet */
+    .founder-card .polaroid-frame > div {
+        background: white !important;
     }
 }
 
@@ -2521,7 +2562,20 @@ body::before {
     
     .polaroid-frame > div {
         width: 200px !important;
-        height: 250px !important;
+        height: 350px !important;
+    }
+    
+    /* Make images fill the entire polaroid frame on mobile */
+    .founder-card .polaroid-frame img {
+        object-fit: cover !important;
+        object-position: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    /* Ensure white background in image containers on mobile */
+    .founder-card .polaroid-frame > div {
+        background: white !important;
     }
     
     .meet-founders-section h2 {

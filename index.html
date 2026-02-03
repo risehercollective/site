@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="mobile-nav.js" defer></script>
 </head>
 <body>
     <!-- Farmers Market Popup Modal -->
@@ -27,7 +28,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div>
-                <div class="logo">Rise Her Collective</div>
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">Rise Her Collective</div>
+                </a>
                 <p class="brand-tagline">Delicious baked goods for a cause</p>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -37,9 +40,6 @@
             </button>
             <div class="mobile-menu-overlay"></div>
             <ul class="nav-menu">
-                <li class="mobile-menu-close-wrapper">
-                    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-                </li>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="our-story.html">Our Story</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -71,7 +71,7 @@
             <div class="hero-text-content" style="background: rgba(255, 255, 255, 0.95); padding: 3rem; border-radius: 20px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
                 <h1 class="hero-title" style="font-size: 4.5rem; font-family: 'Bebas Neue', sans-serif; font-weight: 400; color: #FB9EBB; margin-bottom: 1.5rem; line-height: 1; letter-spacing: 8px; text-transform: uppercase; text-shadow: 0 2px 10px rgba(251, 158, 187, 0.15);">Sweet Treats That Support Women</h1>
                 <p class="hero-subtitle" style="font-size: 1.3rem; color: #555; margin-bottom: 0.5rem; font-weight: 500;">Every bite helps empower our community</p>
-                <p class="hero-description" style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Freshly baked cookies, decadent cakes, and gooey cinnamon rolls—all made with purpose. When you order from us, you're not just getting something sweet, you're supporting women's empowerment programs.</p>
+                <p class="hero-description" style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Freshly baked cookies, and gooey cinnamon rolls—all made with purpose and guided by faith. When you order from us, you're not just getting something sweet, you're supporting women's empowerment programs.</p>
                 <div class="hero-buttons" style="display: flex; gap: 15px; margin-bottom: 2rem; flex-wrap: wrap;">
                     <a href="menu.html" class="btn-primary" style="font-size: 1rem; padding: 18px 45px;">Order Now</a>
                     <a href="menu.html" class="btn-secondary" style="font-size: 1rem; padding: 18px 45px;">View Menu</a>
@@ -147,7 +147,7 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
             <div class="product-grid" style="margin-top: 4rem;">
                 <div class="product-card">
                     <div class="product-image-placeholder" style="background: linear-gradient(135deg, #FFF5E6 0%, #FFE5CC 100%);">
-                        <img src="images/Screenshot 2026-01-24 at 8.34.05 PM 2.png" alt="Delicious Cookies" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/Screenshot 2026-01-25 at 11.27.14 PM.png" alt="Delicious Cookies" style="width: 100%; height: 100%; object-fit: cover;">
 
                     </div>
                     <div style="padding: 2rem;">
@@ -159,7 +159,7 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
                 </div>
                 <div class="product-card">
                     <div class="product-image-placeholder" style="background: linear-gradient(135deg, #FFE6F0 0%, #FFD6E8 100%);">
-<img src="images/04B5A2CA-4E06-471A-BE15-A67E756FD88EScreenshot 2026-01-24 at 8.22.14 PM.jpg" alt="Delicious Cookies" style="width: 100%; height: 100%; object-fit: cover;">
+<img src="images/Screenshot 2026-01-26 at 9.53.44 AM.png" alt="Delicious Cookies" style="width: 100%; height: 100%; object-fit: cover;">
                         
                     </div>
                     <div style="padding: 2rem;">
@@ -171,13 +171,13 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
                 </div>
                 <div class="product-card">
                     <div class="product-image-placeholder" style="background: linear-gradient(135deg, #FFF0E6 0%, #FFE5D6 100%);">
-                        <img src="images/Screenshot 2026-01-24 at 10.21.52 PM.png" alt="cinnamon" style="width: 100%; height: 100%; object-fit: cover;">
-                        
+                        <img src="images/Screenshot 2026-01-26 at 10.13.50 AM.png" alt="cinnamon" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
+                    
                     <div style="padding: 2rem;">
                         <h3>Cinnamon Rolls</h3>
                         <p style="color: #666; margin: 0.75rem 0 1rem; line-height: 1.6;">Irresistibly gooey and cinnamon-spiced, topped with creamy frosting. Fresh-baked and perfect for breakfast, brunch, or a sweet treat any time of day.</p>
-                        <p class="price" style="margin-bottom: 1.5rem; font-size: 1.4rem;">$15/dozen</p>
+                        <p class="price" style="margin-bottom: 1.5rem; font-size: 1.4rem;">starting at $5</p>
                         <a href="menu.html" class="btn-secondary">Order Now</a>
                     </div>
                 </div>
@@ -310,85 +310,6 @@ Every treat is baked with intention and prayer. Guided by our faith, 100% of our
             }
         });
 
-        // Mobile Menu Toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const menuOverlay = document.querySelector('.mobile-menu-overlay');
-        
-        function closeMobileMenu() {
-            if (navMenu) {
-                navMenu.classList.remove('active');
-            }
-            if (menuOverlay) {
-                menuOverlay.classList.remove('active');
-            }
-            if (mobileMenuToggle) {
-                mobileMenuToggle.classList.remove('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            }
-            // Allow body scroll when menu is closed
-            document.body.style.overflow = '';
-        }
-        
-        function openMobileMenu() {
-            if (navMenu) {
-                navMenu.classList.add('active');
-            }
-            if (menuOverlay) {
-                menuOverlay.classList.add('active');
-            }
-            if (mobileMenuToggle) {
-                mobileMenuToggle.classList.add('active');
-                mobileMenuToggle.setAttribute('aria-expanded', 'true');
-            }
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = 'hidden';
-        }
-        
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                if (navMenu && navMenu.classList.contains('active')) {
-                    closeMobileMenu();
-                } else {
-                    openMobileMenu();
-                }
-            });
-        }
-        
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', function(e) {
-                e.stopPropagation();
-                closeMobileMenu();
-            });
-        }
-        
-        // Close menu when clicking on overlay
-        if (menuOverlay) {
-            menuOverlay.addEventListener('click', function(e) {
-                e.stopPropagation();
-                closeMobileMenu();
-            });
-        }
-
-        // Close menu when clicking on a navigation link
-        if (navMenu) {
-            const navLinks = navMenu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Small delay to allow navigation
-                    setTimeout(closeMobileMenu, 100);
-                });
-            });
-        }
-        
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
-                closeMobileMenu();
-            }
-        });
     </script>
 </body>
 </html>
