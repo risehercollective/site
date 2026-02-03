@@ -1919,12 +1919,16 @@ a:hover .logo {
         width: 100% !important;
     }
     
-    /* Make cinnamon roll image bigger on mobile (third product card) */
+    /* Make all product images bigger on mobile */
+    .product-grid .product-card:nth-child(1) .product-image-placeholder,
+    .product-grid .product-card:nth-child(2) .product-image-placeholder,
     .product-grid .product-card:nth-child(3) .product-image-placeholder {
         height: 400px !important;
     }
     
-    /* Show full cinnamon roll image without cropping on mobile */
+    /* Show full product images without cropping on mobile */
+    .product-grid .product-card:nth-child(1) .product-image-placeholder img,
+    .product-grid .product-card:nth-child(2) .product-image-placeholder img,
     .product-grid .product-card:nth-child(3) .product-image-placeholder img {
         object-fit: contain !important;
     }
